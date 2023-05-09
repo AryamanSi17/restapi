@@ -27,5 +27,21 @@ router.delete('/:id',function(req,res){
 
     users=users.filter((user)=> user.id ===! id)//filter removes when false is the condition
     res.send("User with that particular id deleted");
+});
+router.patch('/:id',function(req,res){
+    const {id}=req.params;
+    const {firstName ,lastName, age}=req.body;
+    const user=users.find((user)=>user.id===id);
+    if(firstName){
+        user.firstName=firstName;
+    }
+    if(lastName){
+        user.lastName=lastName;
+    }
+    if(age){
+        user.age=age;
+    }
+res.send("Updated");   
+
 })
 export default router;
