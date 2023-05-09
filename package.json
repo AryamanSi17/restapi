@@ -1,0 +1,17 @@
+{
+  "name": "restapi",
+  "version": "1.0.0",
+  "description": "restapicrud",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "aryaman sinha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "uuid": "^9.0.0"
+  }
+}
